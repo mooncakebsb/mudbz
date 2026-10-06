@@ -3,60 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MuDBZ - Halloween</title>
+<title>MuDBZ - Seu Mundo de Aventuras - Entrada Halloween</title>
 <style>
+/* ===== TEMPLATE MuDBZ - PADRÃO ORIGINAL ===== */
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   min-height:100vh;
-  background:#0a0a0f url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1280') no-repeat center fixed;
+  /* SUA IMAGEM DO POSTIMG COMO FUNDO INTEIRO */
+  background:#000 url('https://i.postimg.cc/1Xq1tL7p/MuDBZ-Halloween.jpg') no-repeat center fixed;
   background-size:cover;
-  color:#fff;font-family:Arial;
+  font-family:'Segoe UI',Arial,sans-serif;color:#fff;
   display:flex;align-items:center;justify-content:center
 }
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:0}
-.box{
-  position:relative;z-index:1;width:92%;max-width:900px;
-  text-align:center;padding:35px 20px;
-  background:rgba(15,15,25,.92);border:1px solid #8a2be2;
-  border-radius:20px;box-shadow:0 0 40px rgba(138,43,226,.6)
+/* Se a imagem do postimg não carregar, usa fallback */
+body::before{
+  content:"";position:fixed;inset:0;
+  background:linear-gradient(rgba(5,5,15,.75), rgba(0,0,0,.85));
+  z-index:0
 }
-.top{color:#ff8c00;text-shadow:0 0 12px #ff8c00;font-weight:bold;letter-spacing:3px;margin-bottom:12px}
-h1{font-size:62px;margin:0;background:linear-gradient(#fff,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{letter-spacing:5px;color:#ccc;margin-bottom:20px}
-.status{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:20px 0;padding:16px;background:rgba(0,0,0,.4);border-radius:12px}
-.status div small{display:block;color:#aaa;font-size:10px} 
-.status div b{color:#00ff88;font-size:17px}
-.botoes{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:15px}
-.btn{padding:14px 28px;border-radius:8px;font-weight:bold;text-decoration:none;text-transform:uppercase;transition:.2s}
-.entrar{background:linear-gradient(90deg,#8a2be2,#a855f7);color:#fff;box-shadow:0 0 20px rgba(138,43,226,.7)}
-.sec{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff}
-.btn:hover{transform:scale(1.05)}
+.container{position:relative;z-index:1;width:94%;max-width:1000px;text-align:center;padding:30px 20px}
+
+/* LOGO - PADRÃO MuDBZ */
+.logo{font-size:68px;font-weight:900;letter-spacing:2px;background:linear-gradient(#fff,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 18px #8a2be2)}
+.sub{letter-spacing:6px;color:#d8b4fe;margin-top:-8px;font-size:13px}
+
+/* HALLOWEEN TOPO */
+.halloween{margin:18px 0 10px;color:#ff8c00;text-shadow:0 0 12px #ff8c00;font-weight:bold;letter-spacing:3px;font-size:13px;border:1px solid #ff8c00;background:rgba(255,140,0,.12);display:inline-block;padding:6px 18px;border-radius:30px}
+
+/* STATUS BOX - INFORMAÇÕES REAIS DO SERVIDOR - EDITE AQUI */
+.status-box{
+  margin:28px auto;
+  background:rgba(12,12,22,.92);
+  border:1px solid #7c3aed;border-radius:16px;
+  padding:18px 22px;
+  display:flex;gap:22px;flex-wrap:wrap;justify-content:center;
+  box-shadow:0 0 35px rgba(124,58,237,.5), inset 0 0 0 1px rgba(255,255,255,.05);
+  backdrop-filter:blur(6px)
+}
+.item small{display:block;color:#9ca3af;font-size:10px;letter-spacing:1px}
+.item b{font-size:17px}
+.online{color:#22c55e} .roxo{color:#a78bfa} .laranja{color:#fb923c} .amarelo{color:#facc15}
+.ponto{width:9px;height:9px;background:#22c55e;border-radius:50%;display:inline-block;box-shadow:0 0 10px #22c55e;animation:pulse 1.5s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.25)}100%{transform:scale(1)}}
+
+/* BOTOES - MESMO NIVEL DO INDEX PRINCIPAL */
+.botoes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.btn{padding:14px 30px;border-radius:10px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.5px;transition:.25s;font-size:14px;border:1px solid transparent}
+.btn-entrar{background:linear-gradient(90deg,#7c3aed,#a855f7);color:#fff;box-shadow:0 0 22px rgba(124,58,237,.7);border-color:#a78bfa}
+.btn-entrar:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 35px rgba(124,58,237,1)}
+.btn-sec{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#e5e7eb;backdrop-filter:blur(4px)}
+.btn-sec:hover{background:rgba(255,255,255,.14);border-color:#fb923c;color:#fb923c;transform:translateY(-2px)}
+
+/* RODAPE INFOS - TEMPLATE */
+.infos{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.infos span{background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);padding:6px 12px;border-radius:20px;font-size:11px;color:#cbd5e1}
+
+/* PARA TROCAR A IMAGEM DE FUNDO: 
+   Troque a URL dentro de body{background: url('https://i.postimg.cc/P5JHVnSB/hollowyn.webp')}
+   Sua URL postimg direta: https://i.postimg.cc/XXXX/seu-arquivo.jpg
+*/
 </style>
 </head>
 <body>
-<div class="overlay"></div>
-<div class="box">
-<div class="top">🎃 EVENTO HALLOWEEN - DROP DOBRADO 🎃</div>
-<h1>MuDBZ</h1>
-<div class="sub">SEU MUNDO DE AVENTURAS</div>
+<div class="container">
+  <div class="logo">MuDBZ</div>
+  <div class="sub">SEU MUNDO DE AVENTURAS</div>
 
-<div class="status">
-<div><small>● STATUS</small><b>ONLINE</b></div>
-<div><small>VERSAO</small><b style="color:#a855f7">S6 EP3</b></div>
-<div><small>EXP</small><b style="color:#ff8c00">1000x</b></div>
-<div><small>PLAYERS</small><b id="p">127</b></div>
-<div><small>DROP</small><b style="color:#ff8c00">80%+HALLOWEEN</b></div>
+  <div class="halloween">🎃 EVENTO HALLOWEEN ATIVO - DROP +50% E BOSS INVASÃO 20:00 🎃</div>
+
+  <!-- INFORMAÇÕES REAIS DO SEU SERVIDOR - ALTERE AQUI -->
+  <div class="status-box">
+    <div class="item"><small><span class="ponto"></span> STATUS</small><b class="online">ONLINE</b></div>
+    <div class="item"><small>VERSÃO</small><b class="roxo">SEASON 6 EP3</b></div>
+    <div class="item"><small>EXPERIÊNCIA</small><b class="laranja">1000x</b></div>
+    <div class="item"><small>DROP</small><b class="amarelo">80%</b></div>
+    <div class="item"><small>PLAYERS ON</small><b class="online" id="players">127</b></div>
+    <div class="item"><small>RESET</small><b class="roxo">FREE</b></div>
+  </div>
+
+  <!-- BOTOES NO MESMO NIVEL DO INDEX -->
+  <div class="botoes">
+    <a href="https://pulse-bankbook-threefold.ngrok-free.dev" class="btn btn-entrar">ENTRAR NO SITE</a>
+    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/download" class="btn btn-sec">Download</a>
+    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/cadastro" class="btn btn-sec">Cadastro</a>
+    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/ranking" class="btn btn-sec">Ranking</a>
+    <a href="https://discord.gg/SEU-DISCORD" class="btn btn-sec">Discord</a>
+  </div>
+
+  <div class="infos">
+    <span>⚔️ Servidor BSB - Brasileiro</span>
+    <span>🕸️ Exp: 1000x / Drop: 80%</span>
+    <span>💀 Invasão Halloween: 20:00 - Lorencia</span>
+    <span>👻 MuDBZ 2025</span>
+  </div>
 </div>
 
-<div class="botoes">
-<a href="https://pulse-bankbook-threefold.ngrok-free.dev" class="btn entrar">ENTRAR NO JOGO</a>
-<a href="https://pulse-bankbook-threefold.ngrok-free.dev" class="btn sec">Download</a>
-<a href="https://pulse-bankbook-threefold.ngrok-free.dev" class="btn sec">Cadastro</a>
-<a href="#" class="btn sec">Discord</a>
-</div>
-
-<p style="margin-top:22px;font-size:11px;color:#aaa">Exp 1000x | Drop Halloween +50% | Invasao 20:00</p>
-</div>
-<script>setInterval(()=>{document.getElementById('p').innerText=124+Math.floor(Math.random()*8)},3000)</script>
+<script>
+// Players dinâmico - mais real
+let base=127; setInterval(()=>{document.getElementById('players').innerText=base+Math.floor(Math.random()*10)-3},3500);
+</script>
 </body>
 </html>
