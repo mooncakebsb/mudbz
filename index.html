@@ -6,63 +6,59 @@
 <title>RF Info | Sites que Vendem</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
 .topo{width:100%;background:#0a0a0a;display:flex;justify-content:center;overflow:hidden}
-.topo img{width:100%;max-width:1100px;height:auto;display:block;object-fit:contain;border-bottom:2px solid #007ba7;box-shadow:0 10px 30px rgba(0,123,167,.35)}
+.topo img{width:100%;max-width:1100px;height:auto;display:block;object-fit:contain;border-bottom:1px solid #1e3a4a}
 .container{max-width:1150px;margin:0 auto;padding:24px 14px;text-align:center}
-.titulo{font-size:34px;font-weight:900;letter-spacing:.5px}
-.titulo span{color:#ff2d95;text-shadow:0 0 15px #ff2d95}
-.sub{color:#b0b0b0;margin:8px 0 28px;font-size:15px}
-.sub b{color:#007ba7}
-.grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.titulo{font-size:32px;font-weight:800;color:#fff}
+.titulo span{color:#ff2d95}
+.sub{color:#888;margin:8px 0 28px;font-size:14px}
+.sub b{color:#6ab0d1}
+.grid{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
 .card{
-  width:350px;background:#111;border:1px solid #222;border-radius:16px;
-  padding:22px;text-align:left;position:relative;transition:.3s;
+  width:345px;background:#101010;border:1px solid #1e1e1e;border-radius:14px;
+  padding:22px;text-align:left;position:relative;
+  transition:all .25s ease;
   overflow:hidden;
 }
 .card:before{
-  content:'';position:absolute;top:0;left:0;width:100%;height:3px;
-  background:linear-gradient(90deg,#007ba7,#ff2d95);
+  content:'';position:absolute;top:0;left:0;width:100%;height:2px;
+  background:#222;transition:.25s;
 }
-.card:hover{transform:translateY(-6px);border-color:#007ba7;box-shadow:0 0 25px rgba(0,123,167,.4)}
-.card.destaque{border-color:#ff2d95;box-shadow:0 0 20px rgba(255,45,149,.25);transform:scale(1.03)}
+.card:hover{transform:translateY(-4px);border-color:#2a5a75;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.card:hover:before{background:linear-gradient(90deg,#007ba7,#ff2d95)}
+.card.destaque{border-color:#2a2a2a}
+.card.destaque:hover{transform:translateY(-4px);border-color:#ff2d95;box-shadow:0 6px 24px rgba(255,45,149,.15)}
 .badge{
   position:absolute;top:12px;right:12px;
-  background:#ff2d95;color:#fff;font-size:9px;font-weight:900;
-  padding:4px 8px;border-radius:20px;letter-spacing:.5px;
+  background:#1e1e1e;color:#999;font-size:9px;font-weight:700;
+  padding:4px 8px;border-radius:20px;letter-spacing:.5px;border:1px solid #2a2a2a
 }
-.badge.green{background:#00e676;color:#000}
-.card h3{font-size:18px;margin:5px 0 10px}
-.card h3.green{color:#00e676}
-.card h3.blue{color:#00b4ff}
-.card h3.pink{color:#ff2d95}
+.badge.promo{background:#0f2218;color:#5fcf8a;border-color:#1a3a26}
+.badge.hot{background:#23101a;color:#ff7aa8;border-color:#3a1a26}
+.card h3{font-size:16px;margin:6px 0 12px;font-weight:700;color:#ddd}
 .card ul{list-style:none;margin:12px 0}
-.card ul li{font-size:13px;color:#ccc;margin:7px 0;padding-left:18px;position:relative}
-.card ul li:before{content:'✔';position:absolute;left:0;color:#00e676;font-weight:bold}
-.card .price{margin-top:14px;font-size:13px;color:#888}
-.card .price b{color:#fff;font-size:18px}
-.card .price b.pink{color:#ff2d95}
-.selo-seg{
-  margin-top:18px;background:rgba(0,123,167,.1);border:1px dashed #007ba7;
-  border-radius:8px;padding:8px 10px;font-size:11px;color:#7dcfff;text-align:center;
+.card ul li{font-size:12.5px;color:#999;margin:8px 0;padding-left:16px;position:relative}
+.card ul li:before{content:'—';position:absolute;left:0;color:#444}
+.card .price{margin-top:16px;font-size:12px;color:#666;border-top:1px solid #1a1a1a;padding-top:12px}
+.card .price b{color:#ccc;font-size:15px}
+.selo{
+  margin-top:12px;background:#0e0e0e;border:1px solid #1e1e1e;
+  border-radius:8px;padding:8px 10px;font-size:11px;color:#777;text-align:center;
 }
-.selo-promo{
-  margin-top:12px;background:linear-gradient(90deg,rgba(0,230,118,.15),rgba(0,230,118,.05));
-  border:1px solid #00e676;border-radius:8px;padding:8px 10px;font-size:11px;color:#00e676;
-  text-align:center;font-weight:700;
-}
-.botoes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:35px}
-.btn{padding:14px 28px;border-radius:12px;font-weight:900;text-decoration:none;text-transform:uppercase;letter-spacing:.5px;transition:.25s;font-size:12px;border:1px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-.btn-verde{background:linear-gradient(90deg,#00a651,#00e676);color:#000;box-shadow:0 0 20px rgba(0,230,118,.6);border-color:#00e676}
-.btn-verde:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 0 35px rgba(0,230,118,.9)}
-.btn-rosa{background:rgba(255,45,149,.12);border-color:#ff2d95;color:#ff2d95}
-.btn-rosa:hover{background:#ff2d95;color:#fff;box-shadow:0 0 18px rgba(255,45,149,.5)}
-.prova{margin-top:40px;background:#0f0f0f;border:1px solid #1f1f1f;border-radius:12px;padding:16px;font-size:12px;color:#888}
-.footer{margin-top:30px;padding:15px;color:#444;font-size:10px;border-top:1px solid #1a1a1a}
-@media(max-width:1100px){.card.destaque{transform:scale(1)}}
+.selo.promo{color:#7dd3a0;border-color:#1a3a26;background:#0f1a13}
+.botoes{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:32px}
+.btn{padding:13px 24px;border-radius:10px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.3px;transition:.2s;font-size:11px;border:1px solid #222;cursor:pointer}
+.btn-verde{background:#0f1a13;color:#5fcf8a;border-color:#1a3a26}
+.btn-verde:hover{background:#00a651;color:#fff;border-color:#00a651}
+.btn-rosa{background:#151515;color:#aaa;border-color:#222}
+.btn-rosa:hover{background:#ff2d95;color:#fff;border-color:#ff2d95}
+.prova{margin-top:32px;background:#0f0f0f;border:1px solid #1a1a1a;border-radius:10px;padding:14px;font-size:11px;color:#666;line-height:1.5}
+.footer{margin-top:28px;padding:14px;color:#333;font-size:10px;border-top:1px solid #151515}
+@media(max-width:1100px){.card{width:330px}}
 @media(max-width:600px){
-  .titulo{font-size:21px}
-  .sub{font-size:13px}
+  .titulo{font-size:20px}
+  .sub{font-size:12px}
   .card{width:100%}
   .btn{width:100%;justify-content:center}
   .botoes{flex-direction:column}
@@ -76,63 +72,59 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
 </div>
 
 <div class="container">
-  <div class="titulo">CRIAMOS SEU <span>SITE QUE VENDE SOZINHO</span></div>
-  <div class="sub">Não entregamos só um site. Entregamos <b>estrutura completa com suporte</b> pra você faturar sem dor de cabeça.</div>
+  <div class="titulo">CRIAMOS SEU <span>SITE QUE VENDE</span></div>
+  <div class="sub">Estrutura completa com suporte. Você foca em vender, <b>nós cuidamos do resto.</b></div>
 
   <div class="grid">
-    <!-- CARD 1 - AGORA VENDE MANUTENÇÃO -->
     <div class="card">
-      <div class="badge green">PROMOÇÃO</div>
-      <h3 class="blue">🚀 SITES QUE CONVERTEM</h3>
+      <div class="badge promo">PROMOÇÃO</div>
+      <h3>SITES QUE CONVERTEM</h3>
       <ul>
-        <li>Design que passa confiança e vende</li>
-        <li>Carregamento ultra-rápido (Google ama)</li>
-        <li>Pronto pra Pix, Cartão e WhatsApp</li>
+        <li>Design profissional que passa confiança</li>
+        <li>Carregamento rápido e otimizado</li>
+        <li>Integrado com Pix, Cartão e WhatsApp</li>
         <li>Manutenção e suporte com a gente</li>
       </ul>
-      <div class="price">Investimento a partir de <b>R$ 497</b></div>
-      <div class="selo-promo">🎁 3 MESES DE MANUTENÇÃO GRÁTIS NESSA PROMOÇÃO</div>
-      <div class="selo-seg">🛡️ Monitorado com Inteligência Anti-Falhas 24h</div>
+      <div class="price">A partir de <b>R$ 497</b> no cartão</div>
+      <div class="selo promo">🎁 3 meses de manutenção grátis nessa promoção</div>
+      <div class="selo">Monitoramento 24h incluso</div>
     </div>
 
-    <!-- CARD 2 DESTAQUE -->
     <div class="card destaque">
-      <div class="badge">MAIS CONTRATADO</div>
-      <h3 class="pink">⚙️ SISTEMA COMPLETO + GESTÃO</h3>
+      <div class="badge hot">MAIS CONTRATADO</div>
+      <h3>SISTEMA COMPLETO + GESTÃO</h3>
       <ul>
         <li>Painel de clientes, financeiro e vendas</li>
         <li>Controle de acesso e permissões</li>
         <li>Relatórios automáticos de lucro</li>
         <li>Suporte e atualizações inclusas</li>
       </ul>
-      <div class="price">Sob medida • <b class="pink">PLANO COM MANUTENÇÃO</b></div>
-      <div class="selo-promo">🔥 FECHANDO AGORA GANHA 3 MESES GRÁTIS DE SUPORTE</div>
-      <div class="selo-seg">🔒 Sistema blindado com backup + IA de segurança</div>
+      <div class="price">Sob medida • <b>Plano com manutenção</b></div>
+      <div class="selo promo">Fechando agora ganha 3 meses de suporte grátis</div>
+      <div class="selo">Backup automático + segurança</div>
     </div>
 
-    <!-- CARD 3 -->
     <div class="card">
-      <h3 class="green">🛡️ BLINDAGEM & AUTOMAÇÃO</h3>
+      <h3>BLINDAGEM & AUTOMAÇÃO</h3>
       <ul>
         <li>Proteção contra invasão e golpes</li>
         <li>Backup automático todo dia</li>
         <li>Alerta no seu WhatsApp se cair</li>
         <li>Nós cuidamos de tudo pra você</li>
       </ul>
-      <div class="price">Segurança que <b>evita prejuízo</b> de milhares</div>
-      <div class="selo-seg">🤖 Nossa IA vigia seu sistema 24h por você</div>
+      <div class="price">Evita prejuízo de <b>milhares</b></div>
+      <div class="selo">Nossa tecnologia vigia seu sistema 24h</div>
     </div>
   </div>
 
   <div class="botoes">
-    <a href="https://wa.me/5561994656887?text=Ola%20vi%20a%20promo%20de%203%20meses%20gratis%20e%20quero%20um%20site" class="btn btn-verde">💬 QUERO A PROMO DE 3 MESES GRÁTIS</a>
-    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-rosa">⚔️ VER PROJETO MUDBZ</a>
-    <a href="https://github.com/mooncalebob" target="_blank" class="btn btn-rosa">⭐ PORTFÓLIO REAL</a>
+    <a href="https://wa.me/5561994656887?text=Ola%20vi%20a%20promo%20de%203%20meses%20gratis" class="btn btn-verde">Quero a promo de 3 meses grátis</a>
+    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-rosa">Ver projeto MuDBZ</a>
+    <a href="https://github.com/mooncalebob" target="_blank" class="btn btn-rosa">Portfólio real</a>
   </div>
 
   <div class="prova">
-    ✅ Sites, lojas, sistemas de MuOnline, painéis financeiros e automações com WhatsApp.<br>
-    <b style="color:#00e676">Como funciona?</b> Você fecha conosco, ganha 3 meses de manutenção grátis pra conhecer nosso trabalho. Depois continua com a gente por um valor fixo mensal. É o laço que fideliza.
+    Como funciona? Você fecha conosco, ganha 3 meses de manutenção grátis pra conhecer nosso trabalho. Depois continua com a gente por um valor fixo mensal. fideliza e garante seu sistema sempre atualizado.
   </div>
 
   <div class="footer">RF Info © 2026 • Sites que vendem • Sistemas que organizam • Segurança que protege</div>
