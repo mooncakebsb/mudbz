@@ -36,10 +36,9 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
 }
 .badge.promo{background:#0f2218;color:#5fcf8a;border-color:#1a3a26}
 .badge.hot{background:#23101a;color:#ff7aa8;border-color:#3a1a26}
-.card h3{font-size:16px;margin:6px 0 12px;font-weight:700;color:#ddd}
+.card h3{font-size:15px;margin:6px 0 12px;font-weight:800;color:#ddd;letter-spacing:.3px}
 .card ul{list-style:none;margin:12px 0}
-.card ul li{font-size:12.5px;color:#999;margin:8px 0;padding-left:16px;position:relative}
-.card ul li:before{content:'—';position:absolute;left:0;color:#444}
+.card ul li{font-size:12.5px;color:#999;margin:9px 0;padding-left:6px}
 .card .price{margin-top:16px;font-size:12px;color:#666;border-top:1px solid #1a1a1a;padding-top:12px}
 .card .price b{color:#ccc;font-size:15px}
 .selo{
@@ -55,10 +54,8 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
 .btn-rosa:hover{background:#ff2d95;color:#fff;border-color:#ff2d95}
 .prova{margin-top:32px;background:#0f0f0f;border:1px solid #1a1a1a;border-radius:10px;padding:14px;font-size:11px;color:#666;line-height:1.5}
 .footer{margin-top:28px;padding:14px;color:#333;font-size:10px;border-top:1px solid #151515}
-@media(max-width:1100px){.card{width:330px}}
 @media(max-width:600px){
   .titulo{font-size:20px}
-  .sub{font-size:12px}
   .card{width:100%}
   .btn{width:100%;justify-content:center}
   .botoes{flex-direction:column}
@@ -73,58 +70,65 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
 
 <div class="container">
   <div class="titulo">CRIAMOS SEU <span>SITE QUE VENDE</span></div>
-  <div class="sub">Estrutura completa com suporte. Você foca em vender, <b>nós cuidamos do resto.</b></div>
+  <div class="sub">Escolha o pacote. Você foca em vender, <b>nós cuidamos do resto.</b></div>
 
   <div class="grid">
+    <!-- CARD 1 - DEV R$497 -->
     <div class="card">
-      <div class="badge promo">PROMOÇÃO</div>
-      <h3>SITES QUE CONVERTEM</h3>
+      <div class="badge promo">A PARTIR DE R$497</div>
+      <h3>💻 PACOTE DEV - 5 SERVIÇOS</h3>
       <ul>
-        <li>Design profissional que passa confiança</li>
-        <li>Carregamento rápido e otimizado</li>
-        <li>Integrado com Pix, Cartão e WhatsApp</li>
-        <li>Manutenção e suporte com a gente</li>
+        <li>✅ HTML + CSS Responsivo</li>
+        <li>✅ PHP + MySQL básico</li>
+        <li>✅ Landing Page de Vendas</li>
+        <li>✅ Correção e Atualização de Site</li>
+        <li>✅ Instalação WordPress + Configuração</li>
       </ul>
-      <div class="price">A partir de <b>R$ 497</b> no cartão</div>
-      <div class="selo promo">🎁 3 meses de manutenção grátis nessa promoção</div>
-      <div class="selo">Monitoramento 24h incluso</div>
+      <div class="price">Pacote completo <b>R$ 497</b> à vista</div>
+      <div class="selo promo">🎁 3 meses de manutenção grátis</div>
+      <div class="selo">Entrega rápida + suporte</div>
     </div>
 
+    <!-- CARD 2 - DESIGNER -->
     <div class="card destaque">
-      <div class="badge hot">MAIS CONTRATADO</div>
-      <h3>SISTEMA COMPLETO + GESTÃO</h3>
+      <div class="badge hot">DESIGNER</div>
+      <h3>🎨 PACOTE ARTES VISUAIS</h3>
       <ul>
-        <li>Painel de clientes, financeiro e vendas</li>
-        <li>Controle de acesso e permissões</li>
-        <li>Relatórios automáticos de lucro</li>
-        <li>Suporte e atualizações inclusas</li>
+        <li>✅ Criação de Logo Profissional</li>
+        <li>✅ Banner para Site / Loja</li>
+        <li>✅ Artes para Redes Sociais</li>
+        <li>✅ Cartão de Visita + Flyer</li>
+        <li>✅ Capa YouTube / Facebook / Perfil</li>
       </ul>
-      <div class="price">Sob medida • <b>Plano com manutenção</b></div>
-      <div class="selo promo">Fechando agora ganha 3 meses de suporte grátis</div>
-      <div class="selo">Backup automático + segurança</div>
+      <div class="price">Artes a partir de <b>R$ 97</b> cada</div>
+      <div class="selo promo">🔥 Combo 5 artes com desconto</div>
+      <div class="selo">Arquivos em PNG, JPG e editável</div>
     </div>
 
+    <!-- CARD 3 - AUTOMAÇÃO -->
     <div class="card">
-      <h3>BLINDAGEM & AUTOMAÇÃO</h3>
+      <div class="badge">AUTOMAÇÃO</div>
+      <h3>🤖 PACOTE AUTOMAÇÃO & VENDAS</h3>
       <ul>
-        <li>Proteção contra invasão e golpes</li>
-        <li>Backup automático todo dia</li>
-        <li>Alerta no seu WhatsApp se cair</li>
-        <li>Nós cuidamos de tudo pra você</li>
+        <li>✅ Automação com WhatsApp</li>
+        <li>✅ Bot de Atendimento + Respostas</li>
+        <li>✅ Direcionamento de Pagamento (Pix/Cartão)</li>
+        <li>✅ Integração Site + WhatsApp + Checkout</li>
+        <li>✅ Alerta de Vendas e Monitoramento 24h</li>
       </ul>
-      <div class="price">Evita prejuízo de <b>milhares</b></div>
-      <div class="selo">Nossa tecnologia vigia seu sistema 24h</div>
+      <div class="price">Faz seu site <b>vender sozinho</b></div>
+      <div class="selo">Nossa tecnologia vigia 24h por você</div>
     </div>
   </div>
 
   <div class="botoes">
-    <a href="https://wa.me/5561994656887?text=Ola%20vi%20a%20promo%20de%203%20meses%20gratis" class="btn btn-verde">Quero a promo de 3 meses grátis</a>
+    <a href="https://wa.me/5561994656887?text=Ola%20quero%20o%20pacote%20de%20R$497" class="btn btn-verde">Quero o pacote de R$497</a>
     <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-rosa">Ver projeto MuDBZ</a>
     <a href="https://github.com/mooncalebob" target="_blank" class="btn btn-rosa">Portfólio real</a>
   </div>
 
   <div class="prova">
-    Como funciona? Você fecha conosco, ganha 3 meses de manutenção grátis pra conhecer nosso trabalho. Depois continua com a gente por um valor fixo mensal. fideliza e garante seu sistema sempre atualizado.
+    Como funciona? Você escolhe o pacote, ganha 3 meses de manutenção grátis pra conhecer nosso trabalho. Depois continua com a gente por um valor fixo mensal. É o laço que fideliza.
   </div>
 
   <div class="footer">RF Info © 2026 • Sites que vendem • Sistemas que organizam • Segurança que protege</div>
