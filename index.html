@@ -10,10 +10,9 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
 .topo{
   width:100%;
   background:#0a0a0a;
-  border-bottom:2px solid #007ba7;
-  box-shadow:0 0 25px rgba(0,123,167,.6);
   display:flex;justify-content:center;align-items:center;
   overflow:hidden;
+  /* SEM LINHA AZUL AQUI MAIS */
 }
 .topo img{
   width:100%;
@@ -21,6 +20,9 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
   height:auto;
   display:block;
   object-fit:contain;
+  /* LINHA LIMITADA NO TAMANHO DO BANNER */
+  border-bottom:2px solid #007ba7;
+  box-shadow:0 8px 25px rgba(0,123,167,.35);
 }
 .container{max-width:1100px;margin:0 auto;padding:28px 16px;text-align:center}
 .titulo{font-size:32px;font-weight:800;color:#fff;text-shadow:0 0 12px #007ba7}
@@ -44,16 +46,20 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
 .card:nth-child(2) .tag{background:#ff2d95}
 .botoes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:35px}
 .btn{padding:13px 32px;border-radius:10px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.5px;transition:.25s;font-size:13px;border:1px solid transparent;cursor:pointer}
-.btn-site{background:linear-gradient(90deg,#007ba7,#00b4ff);color:#fff;box-shadow:0 0 18px rgba(0,123,167,.8);border-color:#007ba7}
-.btn-site:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 30px rgba(0,123,167,1)}
-.btn-mu{
-  background:linear-gradient(90deg,#7c3aed,#a855f7);
-  color:#fff;box-shadow:0 0 18px rgba(124,58,237,.8);
-  border-color:#a78bfa;
+/* VERDE NEON */
+.btn-site{
+  background:linear-gradient(90deg,#00a651,#00e676);
+  color:#000;box-shadow:0 0 18px rgba(0,230,118,.7);
+  border-color:#00e676;
 }
-.btn-mu:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 30px rgba(124,58,237,1)}
-.btn-contato{background:rgba(255,45,149,.12);border-color:#ff2d95;color:#ff2d95}
-.btn-contato:hover{background:#ff2d95;color:#fff;transform:translateY(-2px)}
+.btn-site:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 30px rgba(0,230,118,1)}
+/* ROSA NEON - OS OUTROS 2 IGUAIS */
+.btn-rosa{
+  background:rgba(255,45,149,.12);
+  border-color:#ff2d95;
+  color:#ff2d95;
+}
+.btn-rosa:hover{background:#ff2d95;color:#fff;transform:translateY(-2px);box-shadow:0 0 18px rgba(255,45,149,.6)}
 .footer{margin-top:40px;padding:15px;color:#555;font-size:11px;border-top:1px solid #1a1a1a}
 @media(max-width:1024px){
   .topo img{max-width:100%}
@@ -98,9 +104,9 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
   </div>
 
   <div class="botoes">
-    <a href="https://wa.me/5561994656887" class="btn btn-site">SOLICITAR ORÇAMENTO</a>
-    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-mu">⚔️ PROJETO MUDBZ - VER SITE</a>
-    <a href="https://github.com/seuusuario" target="_blank" class="btn btn-contato">VER PROJETOS</a>
+    <a href="https://wa.me/5561994656887" class="btn btn-site">💬 SOLICITAR ORÇAMENTO</a>
+    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-rosa">⚔️ PROJETO MUDBZ</a>
+    <a href="https://github.com/seuusuario" target="_blank" class="btn btn-rosa">VER PROJETOS</a>
   </div>
 
   <div class="footer">RF Info © 2026 - todos os direitos reservados</div>
