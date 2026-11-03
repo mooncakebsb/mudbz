@@ -3,74 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RF Info |</title>
+<title>RF Info | Sites que Vendem</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
-.topo{
-  width:100%;
-  background:#0a0a0a;
-  display:flex;justify-content:center;align-items:center;
-  overflow:hidden;
-  /* SEM LINHA AZUL AQUI MAIS */
-}
-.topo img{
-  width:100%;
-  max-width:1280px;
-  height:auto;
-  display:block;
-  object-fit:contain;
-  /* LINHA LIMITADA NO TAMANHO DO BANNER */
-  border-bottom:2px solid #007ba7;
-  box-shadow:0 8px 25px rgba(0,123,167,.35);
-}
-.container{max-width:1100px;margin:0 auto;padding:28px 16px;text-align:center}
-.titulo{font-size:32px;font-weight:800;color:#fff;text-shadow:0 0 12px #007ba7}
-.titulo span{color:#ff2d95;text-shadow:0 0 12px #ff2d95}
-.sub{color:#aaa;margin:10px 0 25px;font-size:15px}
-.grid{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.topo{width:100%;background:#0a0a0a;display:flex;justify-content:center;overflow:hidden}
+.topo img{width:100%;max-width:1100px;height:auto;display:block;object-fit:contain;border-bottom:2px solid #007ba7;box-shadow:0 10px 30px rgba(0,123,167,.35)}
+.container{max-width:1150px;margin:0 auto;padding:24px 14px;text-align:center}
+.titulo{font-size:34px;font-weight:900;letter-spacing:.5px}
+.titulo span{color:#ff2d95;text-shadow:0 0 15px #ff2d95}
+.sub{color:#b0b0b0;margin:8px 0 28px;font-size:15px}
+.sub b{color:#007ba7}
+.grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
 .card{
-  width:320px;
-  background:linear-gradient(180deg,#141414,#0a0a0a);
-  border:1px solid #007ba7;
-  border-radius:12px;
-  padding:20px;
-  text-align:left;
-  transition:.25s;
+  width:350px;background:#111;border:1px solid #222;border-radius:16px;
+  padding:22px;text-align:left;position:relative;transition:.3s;
+  overflow:hidden;
 }
-.card:hover{border-color:#ff2d95;box-shadow:0 0 18px rgba(255,45,149,.4);transform:translateY(-3px)}
-.card h3{color:#007ba7;margin-bottom:8px}
-.card:nth-child(2) h3{color:#ff2d95}
-.card p{color:#ccc;font-size:13px;line-height:1.5}
-.tag{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:20px;font-size:10px;font-weight:700;background:#007ba7;color:#fff}
-.card:nth-child(2) .tag{background:#ff2d95}
+.card:before{
+  content:'';position:absolute;top:0;left:0;width:100%;height:3px;
+  background:linear-gradient(90deg,#007ba7,#ff2d95);
+}
+.card:hover{transform:translateY(-6px);border-color:#007ba7;box-shadow:0 0 25px rgba(0,123,167,.4)}
+.card.destaque{border-color:#ff2d95;box-shadow:0 0 20px rgba(255,45,149,.25);transform:scale(1.03)}
+.badge{
+  position:absolute;top:12px;right:12px;
+  background:#ff2d95;color:#fff;font-size:9px;font-weight:900;
+  padding:4px 8px;border-radius:20px;letter-spacing:.5px;
+}
+.card h3{font-size:18px;margin:5px 0 10px}
+.card h3.green{color:#00e676}
+.card h3.blue{color:#00b4ff}
+.card h3.pink{color:#ff2d95}
+.card ul{list-style:none;margin:12px 0}
+.card ul li{font-size:13px;color:#ccc;margin:7px 0;padding-left:18px;position:relative}
+.card ul li:before{content:'✔';position:absolute;left:0;color:#00e676;font-weight:bold}
+.card .price{margin-top:14px;font-size:13px;color:#888}
+.card .price b{color:#fff;font-size:18px}
+.card .price b.pink{color:#ff2d95}
+.selo-seg{
+  margin-top:18px;background:rgba(0,123,167,.1);border:1px dashed #007ba7;
+  border-radius:8px;padding:8px 10px;font-size:11px;color:#7dcfff;text-align:center;
+}
 .botoes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:35px}
-.btn{padding:13px 32px;border-radius:10px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.5px;transition:.25s;font-size:13px;border:1px solid transparent;cursor:pointer}
-/* VERDE NEON */
-.btn-site{
-  background:linear-gradient(90deg,#00a651,#00e676);
-  color:#000;box-shadow:0 0 18px rgba(0,230,118,.7);
-  border-color:#00e676;
-}
-.btn-site:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 30px rgba(0,230,118,1)}
-/* ROSA NEON - OS OUTROS 2 IGUAIS */
-.btn-rosa{
-  background:rgba(255,45,149,.12);
-  border-color:#ff2d95;
-  color:#ff2d95;
-}
-.btn-rosa:hover{background:#ff2d95;color:#fff;transform:translateY(-2px);box-shadow:0 0 18px rgba(255,45,149,.6)}
-.footer{margin-top:40px;padding:15px;color:#555;font-size:11px;border-top:1px solid #1a1a1a}
-@media(max-width:1024px){
-  .topo img{max-width:100%}
-  .titulo{font-size:26px}
-}
+.btn{padding:14px 28px;border-radius:12px;font-weight:900;text-decoration:none;text-transform:uppercase;letter-spacing:.5px;transition:.25s;font-size:12px;border:1px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn-verde{background:linear-gradient(90deg,#00a651,#00e676);color:#000;box-shadow:0 0 20px rgba(0,230,118,.6);border-color:#00e676}
+.btn-verde:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 0 35px rgba(0,230,118,.9)}
+.btn-rosa{background:rgba(255,45,149,.12);border-color:#ff2d95;color:#ff2d95}
+.btn-rosa:hover{background:#ff2d95;color:#fff;box-shadow:0 0 18px rgba(255,45,149,.5)}
+.prova{margin-top:40px;background:#0f0f0f;border:1px solid #1f1f1f;border-radius:12px;padding:16px;font-size:12px;color:#888}
+.footer{margin-top:30px;padding:15px;color:#444;font-size:10px;border-top:1px solid #1a1a1a}
+@media(max-width:1100px){.card.destaque{transform:scale(1)}}
 @media(max-width:600px){
-  .container{padding:18px 12px}
-  .titulo{font-size:19px}
+  .titulo{font-size:21px}
   .sub{font-size:13px}
   .card{width:100%}
-  .btn{padding:11px 18px;font-size:11px;width:100%;text-align:center}
+  .btn{width:100%;justify-content:center}
   .botoes{flex-direction:column}
 }
 </style>
@@ -78,38 +66,67 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
 <body>
 
 <div class="topo">
-  <img src="https://i.postimg.cc/F9Knt5tq/Banner-neon-RF-Info.png" alt="RF Info Banner">
+  <img src="https://i.postimg.cc/F9Knt5tq/Banner-neon-RF-Info.png" alt="RF Info">
 </div>
 
 <div class="container">
-  <div class="titulo">CRIAMOS SEU <span> SITES • SISTEMAS •</span></div>
-  <div class="sub"></div>
+  <div class="titulo">CRIAMOS SEU <span>SITE QUE VENDE SOZINHO</span></div>
+  <div class="sub">Não entregamos só um site. Entregamos <b>estrutura pronta pra faturar</b> com segurança inteligente 24h.</div>
 
   <div class="grid">
+    <!-- CARD 1 -->
     <div class="card">
-      <h3>Venda de Sites</h3>
-      <p>Sites de alta conversão, landing pages, e-commerce e portfólios. Design neon moderno e otimizado para vendas.</p>
-      <span class="tag">A PARTIR DE R$ 497</span>
+      <h3 class="blue">🚀 SITES QUE CONVERTEM</h3>
+      <ul>
+        <li>Design que passa confiança e vende</li>
+        <li>Carregamento ultra-rápido (Google ama)</li>
+        <li>Pronto pra Pix, Cartão e WhatsApp</li>
+        <li>Você mesmo edita sem programador</li>
+      </ul>
+      <div class="price">Investimento a partir de <b>R$ 497</b> • parcela no cartão</div>
+      <div class="selo-seg">🛡️ Monitorado com Inteligência Anti-Falhas</div>
     </div>
-    <div class="card">
-      <h3>Sistemas & SaaS</h3>
-      <p>Criação de sistemas personalizados, painel administrativo, controle de clientes, financeiro e automação completa.</p>
-      <span class="tag">SOB MEDIDA</span>
+
+    <!-- CARD 2 DESTAQUE -->
+    <div class="card destaque">
+      <div class="badge">MAIS CONTRATADO</div>
+      <h3 class="pink">⚙️ SISTEMA COMPLETO + GESTÃO</h3>
+      <ul>
+        <li>Painel de clientes, financeiro e vendas</li>
+        <li>Controle de acesso e permissões</li>
+        <li>Relatórios automáticos de lucro</li>
+        <li>Suporte e treinamento incluso</li>
+      </ul>
+      <div class="price">Sob medida para seu negócio <b class="pink">• ORÇAMENTO RÁPIDO</b></div>
+      <div class="selo-seg">🔒 Sistema blindado com backup automático + IA de segurança</div>
     </div>
+
+    <!-- CARD 3 -->
     <div class="card">
-      <h3>Integração com IA</h3>
-      <p>Chatbots, automação com IA, integração com WhatsApp, geração de conteúdo e assistentes virtuais para seu negócio.</p>
-      <span class="tag">IA + AUTOMAÇÃO</span>
+      <h3 class="green">🛡️ BLINDAGEM & AUTOMAÇÃO</h3>
+      <ul>
+        <li>Proteção contra invasão e golpes</li>
+        <li>Backup automático todo dia</li>
+        <li>Alerta no seu WhatsApp se cair</li>
+        <li>Automação que economiza seu tempo</li>
+      </ul>
+      <div class="price">Segurança que <b>evita prejuízo</b> de milhares</div>
+      <div class="selo-seg">🤖 Nossa IA vigia seu sistema 24h por você</div>
     </div>
   </div>
 
   <div class="botoes">
-    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-rosa">⚔️ PROJETO MUDBZ</a>
-    <a href="https://github.com/seuusuario" target="_blank" class="btn btn-rosa">VER PROJETOS</a>
-    <a href="https://wa.me/5561994656887" class="btn btn-site">💬 SOLICITAR ORÇAMENTO</a>
+    <a href="https://wa.me/5561994656887?text=Ola%20quero%20um%20site%20que%20vende" class="btn btn-verde">💬 QUERO MEU SITE AGORA</a>
+    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-rosa">⚔️ VER PROJETO MUDBZ</a>
+    <a href="https://github.com/mooncalebob" target="_blank" class="btn btn-rosa">⭐ PORTFÓLIO REAL</a>
   </div>
 
-  <div class="footer">RF Info © 2026 - todos os direitos reservados</div>
+  <div class="prova">
+    ✅ <b style="color:#fff">+ de 47 projetos entregues</b> • Sites, lojas, sistemas de MuOnline, painéis financeiros e automações com WhatsApp.<br>
+    Trabalhamos com qualquer nicho. Se você tem a ideia, a gente tem a estrutura.
+  </div>
+
+  <div class="footer">RF Info © 2026 • Sites que vendem • Sistemas que organizam • Segurança que protege</div>
 </div>
 
 </body>
