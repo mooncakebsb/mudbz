@@ -20,7 +20,7 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
   max-width:1280px;
   height:auto;
   display:block;
-  object-fit:contain; /* NÃO CORTA MAIS */
+  object-fit:contain;
 }
 .container{max-width:1100px;margin:0 auto;padding:28px 16px;text-align:center}
 .titulo{font-size:32px;font-weight:800;color:#fff;text-shadow:0 0 12px #007ba7}
@@ -46,16 +46,20 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
 .btn{padding:13px 32px;border-radius:10px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.5px;transition:.25s;font-size:13px;border:1px solid transparent;cursor:pointer}
 .btn-site{background:linear-gradient(90deg,#007ba7,#00b4ff);color:#fff;box-shadow:0 0 18px rgba(0,123,167,.8);border-color:#007ba7}
 .btn-site:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 30px rgba(0,123,167,1)}
+.btn-mu{
+  background:linear-gradient(90deg,#7c3aed,#a855f7);
+  color:#fff;box-shadow:0 0 18px rgba(124,58,237,.8);
+  border-color:#a78bfa;
+}
+.btn-mu:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 30px rgba(124,58,237,1)}
 .btn-contato{background:rgba(255,45,149,.12);border-color:#ff2d95;color:#ff2d95}
 .btn-contato:hover{background:#ff2d95;color:#fff;transform:translateY(-2px)}
 .footer{margin-top:40px;padding:15px;color:#555;font-size:11px;border-top:1px solid #1a1a1a}
-
-/* RESPONSIVO AUTOMATICO */
-@media(max-width:1024px){ /* Tablet */
+@media(max-width:1024px){
   .topo img{max-width:100%}
   .titulo{font-size:26px}
 }
-@media(max-width:600px){ /* Celular */
+@media(max-width:600px){
   .container{padding:18px 12px}
   .titulo{font-size:19px}
   .sub{font-size:13px}
@@ -72,8 +76,8 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
 </div>
 
 <div class="container">
-  <div class="titulo">CRIAMOS SEU <span> SITES •SISTEMAS •</span></div>
-  <div class="sub"> </div>
+  <div class="titulo">CRIAMOS SEU <span> SITES • SISTEMAS •</span></div>
+  <div class="sub"></div>
 
   <div class="grid">
     <div class="card">
@@ -95,10 +99,11 @@ body{background:#0a0a0a;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
 
   <div class="botoes">
     <a href="https://wa.me/5561994656887" class="btn btn-site">SOLICITAR ORÇAMENTO</a>
+    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-mu">⚔️ PROJETO MUDBZ - VER SITE</a>
     <a href="https://github.com/seuusuario" target="_blank" class="btn btn-contato">VER PROJETOS</a>
   </div>
 
-  <div class="footer">RF Info © 2026 - todos os direitos reservados </div>
+  <div class="footer">RF Info © 2026 - todos os direitos reservados</div>
 </div>
 
 </body>
