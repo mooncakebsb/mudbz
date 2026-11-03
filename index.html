@@ -3,66 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> ..::>MuDBZ<::.. </title>
+<title>RF Info | Sites • Sistemas • IA</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%}
 body{
-  min-height:100vh;
-  background:#000 url('https://i.postimg.cc/P5JHVnSB/hollowyn.webp') no-repeat center center fixed;
-  background-size:cover;
+  background:#0a0a0a;
+  color:#fff;
   font-family:'Segoe UI',Arial,sans-serif;
-  display:flex;align-items:flex-end;justify-content:center
 }
-/* Sem overlay - sua marca 100% visível */
-
-/* Container só pros botões, lá embaixo */
-.container{
-  position:relative;z-index:1;
+.topo{
   width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-end;
-  padding:0 16px 42px;
-  min-height:100vh
+  height:380px;
+  background:#0a0a0a url('https://i.postimg.cc/F9Knt5tq/Banner-neon-RF-Info.png') no-repeat center center;
+  background-size:cover;
+  border-bottom:2px solid #007ba7;
+  box-shadow:0 0 25px rgba(0,123,167,.6);
 }
-
-/* BOTOES - EMBAIXO COMO NO SEU RISCO */
-.botoes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:30px 16px;
+  text-align:center;
+}
+.titulo{
+  font-size:32px;
+  font-weight:800;
+  color:#fff;
+  text-shadow:0 0 12px #007ba7;
+}
+.titulo span{color:#ff2d95;text-shadow:0 0 12px #ff2d95}
+.sub{color:#aaa;margin:10px 0 25px;font-size:15px}
+.grid{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:20px;
+}
+.card{
+  width:320px;
+  background:linear-gradient(180deg,#141414,#0a0a0a);
+  border:1px solid #007ba7;
+  border-radius:12px;
+  padding:20px;
+  text-align:left;
+  transition:.25s;
+}
+.card:hover{
+  border-color:#ff2d95;
+  box-shadow:0 0 18px rgba(255,45,149,.4);
+  transform:translateY(-3px);
+}
+.card h3{color:#007ba7;margin-bottom:8px}
+.card:nth-child(2) h3{color:#ff2d95}
+.card p{color:#ccc;font-size:13px;line-height:1.4}
+.tag{
+  display:inline-block;
+  margin-top:10px;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:10px;
+  font-weight:700;
+  background:#007ba7;
+  color:#fff;
+}
+.card:nth-child(2) .tag{background:#ff2d95}
+.botoes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:35px}
 .btn{
   padding:13px 32px;border-radius:10px;
   font-weight:800;text-decoration:none;text-transform:uppercase;
   letter-spacing:.5px;transition:.25s;font-size:13px;
   border:1px solid transparent;cursor:pointer
 }
-.btn-entrar{
-  background:linear-gradient(90deg,#7c3aed,#a855f7);
-  color:#fff;box-shadow:0 0 22px rgba(124,58,237,.8);
-  border-color:#a78bfa
+.btn-site{
+  background:linear-gradient(90deg,#007ba7,#00b4ff);
+  color:#fff;box-shadow:0 0 18px rgba(0,123,167,.8);
+  border-color:#007ba7;
 }
-.btn-entrar:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 0 35px rgba(124,58,237,1)}
-.btn-discord{
-  background:rgba(0,0,0,.68);
-  border-color:rgba(255,255,255,.25);
-  color:#fff;backdrop-filter:blur(6px)
+.btn-site:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 30px rgba(0,123,167,1)}
+.btn-contato{
+  background:rgba(255,45,149,.12);
+  border-color:#ff2d95;
+  color:#ff2d95;
 }
-.btn-discord:hover{background:#5865f2;border-color:#5865f2;transform:translateY(-2px)}
-
+.btn-contato:hover{background:#ff2d95;color:#fff;transform:translateY(-2px)}
+.footer{margin-top:40px;padding:15px;color:#555;font-size:11px;border-top:1px solid #1a1a1a}
 @media(max-width:600px){
-  body{background-attachment:scroll;background-position:center top}
-  .container{padding-bottom:28px}
-  .botoes{flex-direction:row;gap:10px}
-  .btn{padding:11px 22px;font-size:11px}
+  .topo{height:200px;background-size:contain;background-color:#0a0a0a}
+  .titulo{font-size:22px}
+  .card{width:100%}
 }
 </style>
 </head>
 <body>
+
+<div class="topo"></div>
+
 <div class="container">
-  <div class="botoes">
-    <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" class="btn btn-entrar">ENTRAR NO SITE</a>
-    <a href="https://discord.gg/SUA-URL-AQUI" target="_blank" class="btn btn-discord">DISCORD</a>
+  <div class="titulo">CRIAMOS <span>SITES • SISTEMAS • IA</span></div>
+  <div class="sub">Integração Inteligente | Sistemas Sob Medida | Venda de Sites Profissionais</div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🌐 Venda de Sites</h3>
+      <p>Sites de alta conversão, landing pages, e-commerce e portfólios. Design neon moderno e otimizado para vendas.</p>
+      <span class="tag">A PARTIR DE R$ 497</span>
+    </div>
+    <div class="card">
+      <h3>⚙️ Sistemas & SaaS</h3>
+      <p>Criação de sistemas personalizados, painel administrativo, controle de clientes, financeiro e automação completa.</p>
+      <span class="tag">SOB MEDIDA</span>
+    </div>
+    <div class="card">
+      <h3>🤖 Integração com IA</h3>
+      <p>Chatbots, automação com IA, integração com WhatsApp, geração de conteúdo e assistentes virtuais para seu negócio.</p>
+      <span class="tag">IA + AUTOMAÇÃO</span>
+    </div>
   </div>
+
+  <div class="botoes">
+    <a href="https://wa.me/5599999999999" class="btn btn-site">SOLICITAR ORÇAMENTO</a>
+    <a href="https://github.com/seuusuario" target="_blank" class="btn btn-contato">VER PROJETOS</a>
+  </div>
+
+  <div class="footer">RF Info © 2026 - Sites • Sistemas • Integrações IA | Desenvolvemos qualquer tipo de sistema</div>
 </div>
+
 </body>
 </html>
