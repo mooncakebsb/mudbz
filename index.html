@@ -20,6 +20,7 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
   padding:22px;text-align:left;position:relative;
   transition:all .25s ease;
   overflow:hidden;
+  display:flex;flex-direction:column;
 }
 .card:before{
   content:'';position:absolute;top:0;left:0;width:100%;height:2px;
@@ -48,6 +49,14 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
   border-radius:8px;padding:8px 10px;font-size:11px;color:#777;text-align:center;
 }
 .selo.promo{color:#7dd3a0;border-color:#1a3a26;background:#0f1a13}
+/* BOTÃO DENTRO DO CARD */
+.btn-card{
+  display:block;text-align:center;margin-top:16px;
+  padding:13px 10px;border-radius:10px;font-weight:800;
+  text-decoration:none;text-transform:uppercase;letter-spacing:.3px;
+  font-size:11px;background:#0f1a13;color:#5fcf8a;border:1px solid #1a3a26;transition:.2s;
+}
+.btn-card:hover{background:#00a651;color:#fff;border-color:#00a651}
 .botoes{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:32px}
 .btn{padding:13px 24px;border-radius:10px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.3px;transition:.2s;font-size:11px;border:1px solid #222;cursor:pointer}
 .btn-verde{background:#0f1a13;color:#5fcf8a;border-color:#1a3a26}
@@ -75,8 +84,9 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
   <div class="sub"></b></div>
 
   <div class="grid">
+    <!-- CARD 1 - ESTRUTURAS R$ 989,99 -->
     <div class="card">
-      <div class="badge">A PARTIR DE R$497</div>
+      <div class="badge">R$ 989,99</div>
       <h3>💻 ESTRUTURAS</h3>
       <ul>
         <li>✅ HTML + CSS Responsivo</li>
@@ -85,13 +95,15 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
         <li>✅ Correção e Atualização de Site</li>
         <li>✅ Instalação WordPress + Configuração</li>
       </ul>
-      <div class="price">Pacote completo <b>R$ 497</b> à vista</div>
+      <div class="price">Pacote completo <b>R$ 989,99</b> à vista</div>
       <div class="selo promo">🎁 3 meses de manutenção grátis</div>
       <div class="selo">Entrega rápida + suporte</div>
+      <a href="https://wa.me/5561994656887?text=Ol%C3%A1%20quero%20o%20pacote%20ESTRUTURAS%20de%20R%24%20989%2C99" class="btn-card">Quero Estruturas - R$ 989,99</a>
     </div>
 
+    <!-- CARD 2 - ARTES VISUAIS R$ 499,99 -->
     <div class="card">
-      <div class="badge">DESIGNER</div>
+      <div class="badge">R$ 499,99</div>
       <h3>🎨 ARTES VISUAIS</h3>
       <ul>
         <li>✅ Criação de Logo Profissional</li>
@@ -100,13 +112,15 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
         <li>✅ Cartão de Visita + Flyer</li>
         <li>✅ Capa YouTube / Facebook / Perfil</li>
       </ul>
-      <div class="price">Artes a partir de <b>R$ 97</b> cada</div>
+      <div class="price">Pacote completo <b>R$ 499,99</b> à vista</div>
       <div class="selo promo">🔥 Combo 5 artes com desconto</div>
       <div class="selo">Arquivos em PNG, JPG e editável</div>
+      <a href="https://wa.me/5561994656887?text=Ol%C3%A1%20quero%20o%20pacote%20ARTES%20VISUAIS%20de%20R%24%20499%2C99" class="btn-card">Quero Artes - R$ 499,99</a>
     </div>
 
+    <!-- CARD 3 - AUTOMAÇÃO R$ 1.489,99 -->
     <div class="card">
-      <div class="badge">AUTOMAÇÃO</div>
+      <div class="badge">R$ 1.489,99</div>
       <h3>🤖 AUTOMAÇÃO & VENDAS</h3>
       <ul>
         <li>✅ Automação com WhatsApp</li>
@@ -115,17 +129,16 @@ body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',Arial,sans-serif}
         <li>✅ Integração Site + WhatsApp + Checkout</li>
         <li>✅ Alerta de Vendas e Monitoramento 24h</li>
       </ul>
-      <div class="price">Faz seu site <b>vender sozinho</b></div>
+      <div class="price">Pacote completo <b>R$ 1.489,99</b> à vista</div>
       <div class="selo promo">🎁 3 meses de suporte grátis</div>
       <div class="selo">Nossa tecnologia vigia 24h por você</div>
+      <a href="https://wa.me/5561994656887?text=Ol%C3%A1%20quero%20o%20pacote%20AUTOMA%C3%87%C3%83O%20%26%20VENDAS%20de%20R%24%201.489%2C99" class="btn-card">Quero Automação - R$ 1.489,99</a>
     </div>
   </div>
 
   <div class="botoes">
-    <a href="https://wa.me/5561994656887?text=Ola%20quero%20o%20pacote%20de%20R$497" class="btn btn-verde">Quero o pacote de R$497</a>
     <a href="https://pulse-bankbook-threefold.ngrok-free.dev/" target="_blank" class="btn btn-rosa">🎮 Ver projeto MuDBZ</a>
     <a href="https://pulse-bankbook-threefold.ngrok-free.dev/braz%20burge/" target="_blank" class="btn btn-rosa">🍔 Ver projeto Braz Burger</a>
-    
   </div>
 
   <div class="prova">
